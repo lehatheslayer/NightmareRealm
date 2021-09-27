@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 import wga.app.gui.Gui;
 import wga.app.objects.Game;
 
-// TODO: напиши тесты на методы, README.md
-
 /**
  * Главный класс программы, запускает оконное приложение, связывает GUI с бизнес-логикой
  */
