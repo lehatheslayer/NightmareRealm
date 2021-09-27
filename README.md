@@ -36,6 +36,6 @@ mvn clean javafx:run
 - В качестве альтернативы вы можете запустить `Main` в `Main.java` в
   выбранной вами среде разработки, например IntelliJ
 
-### Также можно запустить [Executable jar file](NightmareRealmPrototype.jar)
+### Также можно запустить [Executable jar file](https://github.com/lehatheslayer/NightmareRealm/releases/download/v1.0.0/NightmareRealmPrototype.jar)
 
 
