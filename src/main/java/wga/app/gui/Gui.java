@@ -130,7 +130,7 @@ public class Gui {
     }
 
     /**
-     * Метод убирают выделение у клетки
+     * Метод удаляет выделение у клетки
      */
     private void deleteHover() {
         selected.getRectangle().setStroke(Color.BLACK);
