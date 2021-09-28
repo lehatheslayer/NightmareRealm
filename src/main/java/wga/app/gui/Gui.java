@@ -47,10 +47,10 @@ public class Gui {
      * @return игровая панель, родительский объект, который хранит внутри себя все остальные объекты
      */
     public Parent createContent(Game game) {
-        Pane root = new Pane();
+        final Pane root = new Pane();
         root.setPrefSize(SCENE_WIDTH, SCENE_HEIGHT);
 
-        Button btn = new Button();
+        final Button btn = new Button();
         btn.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
         btn.setText("Restart");
         btn.setTranslateX(SCENE_WIDTH - BUTTON_WIDTH - (SCENE_WIDTH - Game.SIZE * Cell.TILE_SIZE - BUTTON_WIDTH) / 2);
@@ -76,7 +76,7 @@ public class Gui {
 
         for (int i = 0; i < Game.SIZE; i++) {
             for (int j = 0; j < Game.SIZE; j++) {
-                Cell cell = new Cell(i, j);
+                final Cell cell = new Cell(i, j);
                 cell.setTranslateX(i * Cell.TILE_SIZE);
                 cell.setTranslateY(j * Cell.TILE_SIZE);
                 cell.setColor(COLORS.get(game.getField()[j][i]));
@@ -167,7 +167,7 @@ public class Gui {
      * Метод уведомляет игрока о победе
      */
     private void showAlertWithHeaderText() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        final Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("WIN!");
         alert.setHeaderText("Congratulations!");
         alert.setContentText("You won the game!");

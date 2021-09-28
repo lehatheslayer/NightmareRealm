@@ -42,7 +42,7 @@ public class Game {
             }
         }
 
-        List<Cell> colors = new ArrayList<>();
+        final List<Cell> colors = new ArrayList<>();
         for (int i = 0; i < SIZE; i++) {
             colors.addAll(Cell.PLAYABLE_CELLS);
         }
@@ -104,7 +104,7 @@ public class Game {
      * @param y2 - координата y второй клетки
      */
     private void swap(int x1, int y1, int x2, int y2) {
-        Cell tmp = field[y1][x1];
+        final Cell tmp = field[y1][x1];
         field[y1][x1] = field[y2][x2];
         field[y2][x2] = tmp;
     }
@@ -152,7 +152,7 @@ public class Game {
      * @return - собранное поле
      */
     public static Cell[][] generateWinningField() {
-        Cell[][] winningField = new Cell[Game.SIZE][Game.SIZE];
+        final Cell[][] winningField = new Cell[Game.SIZE][Game.SIZE];
 
         for (int i = 0; i < Game.SIZE; i += 2) {
             for (int j = 0; j < Game.SIZE; j++) {
