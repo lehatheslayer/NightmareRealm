@@ -2,6 +2,8 @@ package wga.app.objects;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -60,16 +62,14 @@ class GameTest {
         assertFalse(result);
     }
 
-    @Test
-    void isWin1() {
-        game.setField(GameTest.generateWinningField());
+    @ParameterizedTest
+    @ValueSource(booleans = {true, false})
+    void isWin(boolean isWinningSituation) {
+        if(isWinningSituation) {
+            game.setField(GameTest.generateWinningField());
+        }
 
-        assertTrue(game.isWin());
-    }
-
-    @Test
-    void isWin2() {
-        assertFalse(game.isWin());
+        assertEquals(isWinningSituation, game.isWin());
     }
 
     /**
