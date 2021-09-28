@@ -160,13 +160,13 @@ public class Gui {
      */
     private void win() {
         running = false;
-        showAlertWithHeaderText();
+        showWinningAlert();
     }
 
     /**
      * Метод уведомляет игрока о победе
      */
-    private void showAlertWithHeaderText() {
+    private void showWinningAlert() {
         final Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("WIN!");
         alert.setHeaderText("Congratulations!");
