@@ -16,7 +16,7 @@ public class Game {
     /**
      * Двумерный массив, хранящий все клетки. Представляет собой игровое поле
      */
-    private Cell[][] field;
+    protected Cell[][] field;
 
     /**
      * Создает объект игры, инициализирует игровое поле
@@ -136,37 +136,12 @@ public class Game {
     }
 
     /**
-     * Устанавливает новое значение поля
-     * Используется для тестов
+     * Новое значение игрового поля
      *
-     * @param field - новое поле
+     * @param newField - новое поле
      */
-    public void setField(Cell[][] field) {
-        this.field = field;
-    }
-
-    /**
-     * Метод генерирует собранное поле
-     * Используется для тестов
-     *
-     * @return - собранное поле
-     */
-    public static Cell[][] generateWinningField() {
-        final Cell[][] winningField = new Cell[Game.SIZE][Game.SIZE];
-
-        for (int i = 0; i < Game.SIZE; i += 2) {
-            for (int j = 0; j < Game.SIZE; j++) {
-                winningField[j][i] = Cell.PLAYABLE_CELLS.get(i / 2);
-            }
-        }
-
-        for (int i = 0; i < Game.SIZE; i++) {
-            for (int j = 1; j < Game.SIZE; j += 2) {
-                winningField[i][j] = i % 2 == 0 ? Cell.BLOCKED_CELL : Cell.EMPTY_CELL;
-            }
-        }
-
-        return winningField;
+    public void setField(Cell[][] newField) {
+        this.field = newField;
     }
 }
 
