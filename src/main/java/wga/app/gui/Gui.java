@@ -147,7 +147,7 @@ public class Gui {
     private void swapCells(Cell cell1, Cell cell2, Game game) {
         if (game.isValidSwap(cell1.x, cell1.y, cell2.x, cell2.y)) {
             game.swapCells(cell1.x, cell1.y, cell2.x, cell2.y);
-            Cell.swap(cell1, cell2);
+            Cell.swapColor(cell1, cell2);
 
             if (game.isWin()) {
                 win();

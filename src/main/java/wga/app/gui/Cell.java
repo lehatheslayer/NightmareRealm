@@ -71,7 +71,7 @@ public class Cell extends StackPane {
      * @param cell1 - клетка 1
      * @param cell2 - клетка 2
      */
-    public static void swap(Cell cell1, Cell cell2) {
+    public static void swapColor(Cell cell1, Cell cell2) {
         final Color color1 = cell1.getColor();
         cell1.setColor(cell2.getColor());
         cell2.setColor(color1);
